@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel - Sistema de Facturación Electrónica</title>
+  <link rel="stylesheet" href="panel-styles.css" />
+</head>
+<body>
+
+  <nav class="sidebar">
+    <h2>Digital Solutions</h2>
+    <a href="#inventario">Inventario</a>
+    <a href="#reportes">Reportes</a>
+    <a href="#clientes">Gestión de Clientes</a>
+    <a href="#facturas">Emisión de Facturas</a>
+  </nav>
+
+  <main class="content">
+    <section id="inventario">
+      <h2>Inventario Calzado Mambo </h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Proveedor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Croydon</td>
+            <td>25</td>
+            <td>$157.000</td>
+            <td>Proveedor A</td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Skechers</td>
+            <td>10</td>
+            <td>$350.000</td>
+            <td>Proveedor B</td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>Romulo</td>
+            <td>7</td>
+            <td>$126.000</td>
+            <td>Proveedor C</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+<section id="reportes">
+  <h2>Reportes</h2>
+
+  <form id="formReportes">
+    <label for="tipoReporte">Tipo de reporte</label>
+    <select id="tipoReporte" name="tipoReporte" required>
+      <option value="" disabled selected>Selecciona un tipo</option>
+      <option value="ventas">Ventas</option>
+      <option value="inventario">Inventario</option>
+      <option value="clientes">Clientes</option>
+    </select>
+
+    <label for="fechaInicio">Fecha inicio</label>
+    <input type="date" id="fechaInicio" name="fechaInicio" required />
+
+    <label for="fechaFin">Fecha fin</label>
+    <input type="date" id="fechaFin" name="fechaFin" required />
+
+    <button type="submit">Generar Reporte</button>
+  </form>
+
+  <div id="resultadoReporte" style="margin-top: 1rem;"></div>
+</section>
+
+   <section id="clientes">
+  <h2>Gestión de Clientes</h2>
+
+  <form id="formCliente">
+    <label for="nombreCliente">Nombre completo</label>
+    <input type="text" id="nombreCliente" name="nombreCliente" placeholder="Juan Pérez" required />
+
+    <label for="correoCliente">Correo electrónico</label>
+    <input type="email" id="correoCliente" name="correoCliente" placeholder="cliente@correo.com" required />
+
+    <label for="telefonoCliente">Teléfono</label>
+    <input type="tel" id="telefonoCliente" name="telefonoCliente" placeholder="1234567890" required />
+
+    <button type="submit">Agregar Cliente</button>
+  </form>
+
+  <div id="mensajeCliente" style="margin-top: 1rem; color: green;"></div>
+</section>
+
+   <section id="facturas">
+  <h2>Emisión de Facturas</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Número de Factura</th>
+        <th>Cliente</th>
+        <th>Fecha</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>F001</td>
+        <td>Croydon</td>
+        <td>2025-05-10</td>
+        <td>$3,925.000</td>
+      </tr>
+      <tr>
+        <td>F002</td>
+        <td>Skechers</td>
+        <td>2025-05-15</td>
+        <td>$3,500.000</td>
+      </tr>
+      <tr>
+        <td>F003</td>
+        <td>Romulo</td>
+        <td>2025-05-28</td>
+        <td>$882.000</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+  </main>
+
+</body>
+</html>

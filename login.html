@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Login - Facturación Electrónica</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form action="panel.html" method="get">
+    
+    <label for="tipoUsuario">Tipo de usuario</label>
+    <select id="tipoUsuario" name="tipoUsuario" required>
+        <option value="">Seleccione</option>
+        <option value="admin">Administrador</option>
+        <option value="vendedor">Vendedor</option>
+        <option value="contador">Cajero</option>
+    </select>
+
+    <label for="correo">Correo electrónico</label>
+    <input type="email" id="correo" name="correo" placeholder="usuario@correo.com" required />
+
+    <label for="contrasena">Contraseña</label>
+    <input type="password" id="contrasena" name="contrasena" required />
+
+    <button type="submit">Acceder</button>
+    </form>
+</div>
+
+</body>
+</html>
